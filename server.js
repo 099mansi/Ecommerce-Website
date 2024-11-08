@@ -7,6 +7,7 @@ import categoryRoutes from './routes/categoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors'
 import path from 'path'
+import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 
 //configure env
@@ -46,5 +47,5 @@ const PORT = process.env.PORT || 8070;
 
 //run listen
 app.listen(PORT, () => {
-    console.log(`Server Running on ${PORT}`.bgCyan.white);
+    console.log(chalk.bgCyan.white(`Server Running on ${PORT}`));
 });
